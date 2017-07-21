@@ -1,0 +1,12 @@
+#seletor-cidade, #cidades, #confirma-cidade-seletor, #consumo-medio, #face-da-casa, #contato, #kit-energia-solar, #fim-calculadora {
+  display: none;
+}
+#consumo-medio input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#face-da-casa img {
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+}
