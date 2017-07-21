@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="calculadora.css">
+  </head>
+  <body>
+    <button id="abre-calculadora" type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Abre calculadora</button>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Monte o projeto de energia solar da sua casa.</h4>
+          </div>
+          <div class="modal-body">
+            <div id="localizacao" class="slide">
+              <div id="geolocalizacao-cidade">
+                <p>Esta calculadora de projeto coletará informações sobre sua casa e consumo para mostrar o kit necessário para energia solar na sua residência.</p>
+                <p>Você está em <strong>Curitiba</strong>?</p>
+                <button type="button" id="confirma-cidade">Sim</button>
+                <button type="button" id="abre-seletor-cidade">Não</button>
+              </div>
+              <div id="seletor-cidade">
+                <p>Selecione seu estado e cidade</p>
+                <!-- https://gist.github.com/ografael/2037135 -->
+                <select id="estados">
+                  <option value="estado">Selecione o estado</option>
+                  <option value="ac">Acre</option>
+                  <option value="al">Alagoas</option>
+                  <option value="am">Amazonas</option>
+                  <option value="ap">Amapá</option>
+                  <option value="ba">Bahia</option>
+                  <option value="ce">Ceará</option>
+                  <option value="df">Distrito Federal</option>
+                  <option value="es">Espírito Santo</option>
+                  <option value="go">Goiás</option>
+                  <option value="ma">Maranhão</option>
+                  <option value="mt">Mato Grosso</option>
+                  <option value="ms">Mato Grosso do Sul</option>
+                  <option value="mg">Minas Gerais</option>
+                  <option value="pa">Pará</option>
+                  <option value="pb">Paraíba</option>
+                  <option value="pr">Paraná</option>
+                  <option value="pe">Pernambuco</option>
+                  <option value="pi">Piauí</option>
+                  <option value="rj">Rio de Janeiro</option>
+                  <option value="rn">Rio Grande do Norte</option>
+                  <option value="ro">Rondônia</option>
+                  <option value="rs">Rio Grande do Sul</option>
+                  <option value="rr">Roraima</option>
+                  <option value="sc">Santa Catarina</option>
+                  <option value="se">Sergipe</option>
+                  <option value="sp">São Paulo</option>
+                  <option value="to">Tocantins</option>
+                </select>
+            		<select id="cidades">
+                  <option value="cidade">Selecione a cidade</option>
+                  <option value="01">Cidade 01</option>
+                  <option value="02">Cidade 02</option>
+                  <option value="03">Cidade 03</option>
+                  <option value="04">Cidade 04</option>
+                  <option value="05">Cidade 05</option>
+                  <option value="06">Cidade 06</option>
+                  <option value="07">Cidade 07</option>
+                  <option value="08">Cidade 08</option>
+                  <option value="09">Cidade 09</option>
+                  <option value="10">Cidade 10</option>
+            		</select>
+                <button type="button" id="confirma-cidade-seletor">Confirma cidade</button>
+              </div>
+            </div>
+            <div id="consumo-medio" class="slide">
+              <p>Qual é o seu consumo mensal médio? Insira a quantidade de kWh consumidos nos últimos 12 meses, essa informação você pode encontrar na sua conta de luz.</p>
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" name="mes-01" value="" placeholder="Junho / 2017">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-02" value="" placeholder="Maio / 2017">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-03" value="" placeholder="Abril / 2017">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-04" value="" placeholder="Março / 2017">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-05" value="" placeholder="Fevereiro / 2017">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-06" value="" placeholder="Janeiro / 2017">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-07" value="" placeholder="Dezembro / 2016">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-08" value="" placeholder="Novembro / 2016">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-09" value="" placeholder="Outubro / 2016">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-10" value="" placeholder="Setembro / 2016">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-11" value="" placeholder="Agosto / 2016">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="mes-12" value="" placeholder="Julho / 2016">
+                </div>
+              </div>
+              <button type="button" id="confirma-consumo">Confirma consumo</button>
+            </div>
+            <div id="face-da-casa" class="slide">
+              <p>Sua casa é face norte ou face sul? Isso influência a incidência de luz sobre a casa.</p>
+              <img src="face-norte-sul.jpg" alt="">
+              <button type="button" id="face-norte">Face norte</button>
+              <button type="button" id="face-sul">Face sul</button>
+            </div>
+            <div id="contato" class="slide">
+              <input type="text" name="" value="" placeholder="Insira seu nome">
+              <input type="text" name="" value="" placeholder="Insira seu e-mail">
+              <button type="button" id="confirma-contato">Mostre meu kit</button>
+            </div>
+            <div id="kit-energia-solar" class="slide">
+              <p>Este é o kit necessário para implementação de energia solar em sua casa:</p>
+              <ul>
+                <li>20 painéis de energia solar</li>
+                <li>1 inversor de cabos</li>
+                <li>Conectores</li>
+                <li>Peças para fixação dos painéis</li>
+              </ul>
+              <p>O logger é uma ferramenta opcional para o acompanhamento do desempenho da produção de energia solar em sua casa. Gostaria de incluí-lo?</p>
+              <button type="button" id="confirma-logger">Sim</button>
+              <button type="button" id="rejeita-logger">Não</button>
+            </div>
+            <div id="fim-calculadora" class="slide">
+              <p>Confira sua caixa de e-mail, você terá mais informações sobre orçamento e outros detalhes para implantação de energia solar em sua residência.</p>
+              <button type="button" id="fecha-calculadora" data-dismiss="modal">Ok, sair.</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <p><strong>Localização</strong> - <strong>Consumo médio</strong> - <strong>Face da casa</strong> - <strong>Contato</strong> - <strong>Resultado</strong></p>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="calculadora.js"></script>
+</html>

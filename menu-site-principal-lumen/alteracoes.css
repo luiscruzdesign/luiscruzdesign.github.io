@@ -1,0 +1,24 @@
+.no-mobile.home ul#primary-menu:after {
+  width: 100% !important;
+}
+#mobile-menu li:first-of-type .menu-item-text {
+  /*background: #f9a73f;
+  padding: 10px;*/
+}
+#mobile-menu li:first-of-type .menu-text {
+  color: white;
+}
+.mobile-main-nav li:first-of-type > a .subtitle-text {
+  font-weight: bold;
+}
+@media screen and (min-width: 800px) {
+  .top-header.light-preset-color:not(.sticky-on) .masthead:not(#phantom) .main-nav > li:first-of-type > a .subtitle-text {
+    font-weight: bold;
+  }
+  .top-header.light-preset-color:not(.sticky-on) .masthead:not(#phantom) .main-nav > li:first-of-type > a .menu-text {
+    font-weight: bold;
+  }
+  .main-nav > li > a {
+    margin: 18px 14px 18px 15px;
+  }
+}

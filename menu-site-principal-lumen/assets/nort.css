@@ -1,0 +1,10 @@
+.divisor {
+    width: 2px;
+    background: #a7a7a9;
+    margin: 0 auto;
+}
+canvas#canvas-footer {
+    position: absolute;
+    bottom: 0;
+	z-index:-1
+}
