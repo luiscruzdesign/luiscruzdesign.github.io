@@ -23,6 +23,15 @@
   padding: 25px 15px;
 }
 /* Slides */
+#geolocalizacao-cidade button {
+  margin-top: 15px;
+}
+#consumo-medio p {
+  margin-bottom: 20px;
+}
+#consumo-medio button {
+  margin-top: 15px;
+}
 #consumo-medio input {
   width: 100%;
   margin-bottom: 10px;
@@ -31,6 +40,9 @@
   width: 80%;
   display: block;
   margin: 20px auto;
+}
+#kit-energia-solar button, #fim-calculadora button {
+  margin-top: 15px;
 }
 /* Footer */
 .modal-footer p {
