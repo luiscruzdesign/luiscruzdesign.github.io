@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Calculadora</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="calculadora.css">
   </head>
   <body>
@@ -13,15 +15,17 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Monte o projeto de energia solar da sua casa.</h4>
+            <h4 class="modal-title">Monte seu projeto de <strong>energia solar</strong>.</h4>
           </div>
           <div class="modal-body">
             <div id="localizacao" class="slide">
               <div id="geolocalizacao-cidade">
-                <p>Esta calculadora de projeto coletará informações sobre sua casa e consumo para mostrar o kit necessário para energia solar na sua residência.</p>
+                <p>A calculadora de projeto de energia solar coletará informações sobre a localização e consumo da sua residência para que você possa acabar com sua conta de luz.</p>
                 <p>Você está em <strong>Curitiba</strong>?</p>
-                <button type="button" id="confirma-cidade">Sim</button>
-                <button type="button" id="abre-seletor-cidade">Não</button>
+                <div>
+                  <button type="button" class="btn btn-success" id="confirma-cidade">Sim</button>
+                  <button type="button" class="btn btn-danger" id="abre-seletor-cidade">Não</button>
+                </div>
               </div>
               <div id="seletor-cidade">
                 <p>Selecione seu estado e cidade</p>
@@ -69,7 +73,7 @@
                   <option value="09">Cidade 09</option>
                   <option value="10">Cidade 10</option>
             		</select>
-                <button type="button" id="confirma-cidade-seletor">Confirma cidade</button>
+                <button type="button" class="btn btn-success" id="confirma-cidade-seletor">Confirma cidade</button>
               </div>
             </div>
             <div id="consumo-medio" class="slide">
@@ -112,18 +116,20 @@
                   <input type="text" name="mes-12" value="" placeholder="Julho / 2016">
                 </div>
               </div>
-              <button type="button" id="confirma-consumo">Confirma consumo</button>
+              <button type="button" class="btn btn-success" id="confirma-consumo">Confirma consumo</button>
             </div>
             <div id="face-da-casa" class="slide">
               <p>Sua casa é face norte ou face sul? Isso influência a incidência de luz sobre a casa.</p>
               <img src="face-norte-sul.jpg" alt="">
-              <button type="button" id="face-norte">Face norte</button>
-              <button type="button" id="face-sul">Face sul</button>
+              <div class="text-center">
+                <button type="button" class="btn btn-primary" id="face-norte">Face norte</button>
+                <button type="button" class="btn btn-primary" id="face-sul">Face sul</button>
+              </div>
             </div>
             <div id="contato" class="slide">
               <input type="text" name="" value="" placeholder="Insira seu nome">
               <input type="text" name="" value="" placeholder="Insira seu e-mail">
-              <button type="button" id="confirma-contato">Mostre meu kit</button>
+              <button type="button" class="btn btn-success" id="confirma-contato">Mostre meu kit</button>
             </div>
             <div id="kit-energia-solar" class="slide">
               <p>Este é o kit necessário para implementação de energia solar em sua casa:</p>
@@ -134,12 +140,12 @@
                 <li>Peças para fixação dos painéis</li>
               </ul>
               <p>O logger é uma ferramenta opcional para o acompanhamento do desempenho da produção de energia solar em sua casa. Gostaria de incluí-lo?</p>
-              <button type="button" id="confirma-logger">Sim</button>
-              <button type="button" id="rejeita-logger">Não</button>
+              <button type="button" class="btn btn-success" id="confirma-logger">Sim</button>
+              <button type="button" class="btn btn-danger" id="rejeita-logger">Não</button>
             </div>
             <div id="fim-calculadora" class="slide">
               <p>Confira sua caixa de e-mail, você terá mais informações sobre orçamento e outros detalhes para implantação de energia solar em sua residência.</p>
-              <button type="button" id="fecha-calculadora" data-dismiss="modal">Ok, sair.</button>
+              <button type="button" class="btn btn-success" id="fecha-calculadora" data-dismiss="modal">Ok, sair.</button>
             </div>
           </div>
           <div class="modal-footer">
