@@ -15,6 +15,9 @@ $( document ).ready(function() {
     $("#etapa-localizacao").removeClass("active");
     $("#etapa-consumo").addClass("active");
   });
+  $("#consumo-switcher").change(function() {
+    $("#media-mensal, #media-12-meses, #seletor-consumo p").toggleClass("active");
+  });
   $("#confirma-consumo").click(function() {
     $("#consumo-medio").hide();
     $("#face-da-casa").show();

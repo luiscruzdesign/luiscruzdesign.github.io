@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="calculadora.css">
+    <link rel="stylesheet" href="switcher.css">
   </head>
   <body>
     <button id="abre-calculadora" type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Abre calculadora</button>
@@ -77,8 +78,21 @@
               </div>
             </div>
             <div id="consumo-medio" class="slide">
-              <p>Qual é o seu <strong>consumo mensal médio?</strong> <br><br>Insira a quantidade de kWh consumidos nos últimos 12 meses, essa informação você pode encontrar na sua conta de luz.</p>
-              <div class="row">
+              <p>Qual é o seu <strong>consumo mensal médio?</strong> <br><br>Insira a quantidade de kWh consumidos nos últimos 12 meses ou a sua média mensal. Essas informações você pode encontrar na sua conta de luz.</p>
+              <div id="seletor-consumo">
+                <p class="active">Média mensal</p>
+                <label class="switch">
+                  <input id="consumo-switcher" type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <p>Últimos 12 meses</p>
+              </div>
+              <div id="media-mensal" class="row active">
+                <div class="col-md-12">
+                  <input type="text" name="media-mensal" value="" placeholder="Média mensal">
+                </div>
+              </div>
+              <div id="media-12-meses" class="row">
                 <div class="col-md-4">
                   <input type="text" name="mes-01" value="" placeholder="Junho / 2017">
                 </div>

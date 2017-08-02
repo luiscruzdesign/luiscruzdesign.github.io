@@ -1,5 +1,5 @@
 /* Elementos ocultos por default */
-#seletor-cidade, #cidades, #confirma-cidade-seletor, #consumo-medio, #face-da-casa, #contato, #kit-energia-solar, #fim-calculadora {
+#seletor-cidade, #cidades, #confirma-cidade-seletor, #consumo-medio, #face-da-casa, #contato, #kit-energia-solar, #fim-calculadora, #consumo-medio #media-mensal, #consumo-medio #media-12-meses {
   display: none;
 }
 /* Estilização de fontes em geral para open sans */
@@ -35,6 +35,33 @@
 #consumo-medio input {
   width: 100%;
   margin-bottom: 10px;
+}
+#consumo-medio #media-mensal input {
+  margin: 0 auto 10px;
+  display: block;
+  width: initial;
+}
+#consumo-medio #media-mensal.active, #consumo-medio #media-12-meses.active {
+  display: block;
+}
+#consumo-medio #seletor-consumo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#consumo-medio #seletor-consumo p {
+  display: inline-block;
+  margin: 0;
+}
+#consumo-medio #seletor-consumo p.active {
+  font-weight: bold;
+}
+#consumo-medio #seletor-consumo p:first-of-type {
+  margin-right: 10px;
+}
+#consumo-medio #seletor-consumo p:last-of-type {
+  margin-left: 10px;
 }
 #face-da-casa img {
   width: 80%;
