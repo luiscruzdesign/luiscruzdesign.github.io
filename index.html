@@ -20,6 +20,14 @@
             <h4 class="modal-title">Monte seu projeto de <strong>energia solar</strong>.</h4>
           </div>
           <div class="modal-body">
+            <!--
+            1 - Deve ser possível ao usuário voltar para a página anterior por setas (OK)
+            2 - Se o usuário indicar face sul , sudeste ou sudeste para o telhado o projeto é inviável poi sé necessária uma adequação de telhado , mas emita uma mensagem dizendo que entraremos em contato .
+            3- As faces possíveis são Norte , Noroeste e Nordeste
+            4- Incluir o número de celular também além do e-mail (OK)
+            5 - Falta incluir na calculadora o tipo de telhado (OK)
+            6 - incluir o tipo de entrada , nonofásica , bifásica ou trifásica (OK)
+            -->
             <div id="localizacao" class="slide">
               <div id="geolocalizacao-cidade">
                 <p>A calculadora de projeto de energia solar coletará informações sobre a localização e consumo da sua residência para que você possa acabar com sua conta de luz.</p>
@@ -135,6 +143,14 @@
                 <button type="button" class="btn btn-success" id="confirma-consumo">Confirma consumo</button>
               </div>
             </div>
+            <div id="rede" class="slide">
+              <p>Qual é a <strong>rede</strong> instalada em sua casa?</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-primary" id="rede-monofasica">Monofásica</button>
+                <button type="button" class="btn btn-primary" id="rede-bifasica">Bifásica</button>
+                <button type="button" class="btn btn-primary" id="rede-trifasica">Trifásica</button>
+              </div>
+            </div>
             <div id="face-da-casa" class="slide">
               <p>Sua casa é <strong>face norte ou face sul?</strong> Isso influência a incidência de luz sobre a casa.</p>
               <img src="face-norte-sul.jpg" alt="">
@@ -143,11 +159,32 @@
                 <button type="button" class="btn btn-primary" id="face-sul">Face sul</button>
               </div>
             </div>
+            <div id="telhado" class="slide">
+              <p>Qual é o <strong>tipo de telhado</strong> da sua casa?</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-primary" id="telha-borracha">Telha de borracha</button>
+                <button type="button" class="btn btn-primary" id="telha-ceramica">Telha cerâmica</button>
+                <button type="button" class="btn btn-primary" id="telha-fibrocimento">Telha fibrocimento</button>
+                <button type="button" class="btn btn-primary" id="telha-metalica">Telhado metálico</button>
+                <button type="button" class="btn btn-primary" id="telha-trapezoidal">Telhas metálicas trapezoidais</button>
+              </div>
+            </div>
             <div id="contato" class="slide">
               <p>Insira suas informações de contato para que possamos lhe enviar um relatório do projeto.</p>
-              <input type="text" name="" value="" placeholder="Insira seu nome">
-              <input type="text" name="" value="" placeholder="Insira seu e-mail">
-              <button type="button" class="btn btn-success" id="confirma-contato">Mostre meu kit</button>
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" name="" value="" placeholder="Insira seu nome">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="" value="" placeholder="Insira seu e-mail">
+                </div>
+                <div class="col-md-4">
+                  <input type="phone" name="" value="" placeholder="Insira seu telefone">
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="button" class="btn btn-success" id="confirma-contato">Mostre meu kit</button>
+              </div>
             </div>
             <div id="kit-energia-solar" class="slide">
               <p>Este é o kit necessário para implementação de energia solar em sua casa:</p>
@@ -171,7 +208,11 @@
             </div>
           </div>
           <div class="modal-footer">
-            <p><span id="etapa-localizacao" class="etapa-calculadora active">Localização</span> - <span id="etapa-consumo" class="etapa-calculadora">Consumo médio</span> - <span id="etapa-face" class="etapa-calculadora">Face da casa</span> - <span id="etapa-contato" class="etapa-calculadora">Contato</span> - <span id="etapa-resultado" class="etapa-calculadora">Resultado</span></p>
+            <p><span id="etapa-localizacao" class="etapa-calculadora active">Localização</span> - <span id="etapa-consumo" class="etapa-calculadora">Consumo médio</span> - <span id="etapa-rede" class="etapa-calculadora">Rede</span> - <span id="etapa-face" class="etapa-calculadora">Face da casa</span> - <span id="etapa-telhado" class="etapa-calculadora">Telhado</span> - <span id="etapa-contato" class="etapa-calculadora">Contato</span> - <span id="etapa-resultado" class="etapa-calculadora inactive">Resultado</span></p>
+            <div id="setas">
+              <div id="seta-anterior" class="inactive"></div>
+              <div id="seta-proxima"></div>
+            </div>
             <p><small>Todas as informações são confidenciais e não serão compartilhadas com terceiros.</small></p>
           </div>
         </div><!-- /.modal-content -->

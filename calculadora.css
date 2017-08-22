@@ -1,5 +1,5 @@
 /* Elementos ocultos por default */
-#seletor-cidade, #cidades, #confirma-cidade-seletor, #consumo-medio, #face-da-casa, #contato, #kit-energia-solar, #fim-calculadora, #consumo-medio #media-mensal, #consumo-medio #media-12-meses {
+#seletor-cidade, #cidades, #confirma-cidade-seletor, #consumo-medio, #rede, #face-da-casa, #telhado, #contato, #kit-energia-solar, #fim-calculadora, #consumo-medio #media-mensal, #consumo-medio #media-12-meses {
   display: none;
 }
 /* Estilização de fontes em geral para open sans */
@@ -22,6 +22,41 @@
 .modal-body {
   padding: 25px 15px;
 }
+/* Setas */
+#setas {
+  display: table;
+  width: 100%;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  padding: 0 30px;
+}
+#setas div {
+  width: 10px;
+  height: 15px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+#setas div.inactive {
+  opacity: 0;
+}
+#seta-anterior {
+  float: left;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 10px 7.5px 0;
+  border-color: transparent #f8a035 transparent transparent;
+}
+#seta-proxima {
+  float: right;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 0 7.5px 10px;
+  border-color: transparent transparent transparent #f8a035;
+}
 /* Slides */
 #geolocalizacao-cidade button {
   margin-top: 15px;
@@ -32,7 +67,7 @@
 #consumo-medio button {
   margin-top: 15px;
 }
-#consumo-medio input {
+#consumo-medio input, #contato input {
   width: 100%;
   margin-bottom: 10px;
 }
@@ -68,16 +103,40 @@
   display: block;
   margin: 20px auto;
 }
-#kit-energia-solar button, #fim-calculadora button {
+#telhado button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#telhado button:first-child {
+  margin-top: 10px;
+}
+#telhado button:last-child {
+  margin-bottom: 0;
+}
+#kit-energia-solar button, #fim-calculadora button, #confirma-contato {
   margin-top: 15px;
 }
 /* Footer */
+.modal-footer {
+  position: relative;
+}
 .modal-footer p {
   text-align: center;
+  padding: 0px 35px;
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+}
+.modal-footer p span {
+  cursor: pointer;
 }
 .modal-footer p span.active {
   font-weight: bold;
   color: #f8a035;
+}
+.modal-footer p span.inactive {
+  color: #cccccc;
+  cursor: inherit;
 }
 .modal-header h4 {
   font-family: 'Raleway', sans-serif;
