@@ -132,7 +132,7 @@ $( document ).ready(function() {
     $(".etapa-calculadora").removeClass("active");
     $("#etapa-face").addClass("active");
   });
-  $("#face-norte, #face-sul, #etapa-telhado").click(function() {
+  $(".face-casa, #etapa-telhado").click(function() {
     etapaAtual = '#etapa-telhado';
     $(".slide").hide();
     $("#telhado").show();

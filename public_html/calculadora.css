@@ -98,10 +98,48 @@
 #consumo-medio #seletor-consumo p:last-of-type {
   margin-left: 10px;
 }
-#face-da-casa img {
-  width: 80%;
-  display: block;
-  margin: 20px auto;
+#face-da-casa #ilustracao-faces {
+  width: 70%;
+  height: 266px;
+  background: url('face-norte-sul.jpg') no-repeat;
+  background-size: contain;
+  margin: 50px auto;
+  position: relative;
+}
+.face-casa {
+  position: absolute;
+}
+#face-norte {
+  top: 188px;
+  left: -72px;
+}
+#face-noroeste {
+  bottom: -30px;
+  left: 50px;
+}
+#face-nordeste {
+  top: 84px;
+  left: -40px;
+}
+#face-sul {
+  top: 113px;
+  right: -56px;
+}
+#face-sudeste {
+  top: 55px;
+  right: 50px;
+}
+#face-sudoeste {
+  bottom: 20px;
+  right: -40px;
+}
+#face-leste {
+  top: 31px;
+  left: 91px;
+}
+#face-oeste {
+  bottom: -42px;
+  right: 84px;
 }
 #telhado button {
   width: 100%;
