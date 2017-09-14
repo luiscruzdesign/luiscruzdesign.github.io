@@ -107,45 +107,55 @@ $( document ).ready(function() {
     $("#confirma-cidade-seletor").show();
   });
   $("#confirma-cidade-seletor, #confirma-cidade, #etapa-consumo").click(function() {
-    etapaAtual = '#etapa-consumo';
-    $("#seta-anterior").removeClass('inactive');
-    $(".slide").hide();
-    $("#consumo-medio").show();
-    $(".etapa-calculadora").removeClass("active");
-    $("#etapa-consumo").addClass("active");
-    $("#seta-anterior").show();
+    if (etapaAtual != "#etapa-resultado" && etapaAtual != "#fim-calculadora") {
+      etapaAtual = '#etapa-consumo';
+      $("#seta-anterior").removeClass('inactive');
+      $(".slide").hide();
+      $("#consumo-medio").show();
+      $(".etapa-calculadora").removeClass("active");
+      $("#etapa-consumo").addClass("active");
+      $("#seta-anterior").show();
+    }
   });
   $("#consumo-switcher").change(function() {
     $("#media-mensal, #media-12-meses, #seletor-consumo p").toggleClass("active");
   });
   $("#confirma-consumo, #etapa-rede").click(function() {
-    etapaAtual = '#etapa-rede';
-    $(".slide").hide();
-    $("#rede").show();
-    $(".etapa-calculadora").removeClass("active");
-    $("#etapa-rede").addClass("active");
+    if (etapaAtual != "#etapa-resultado" && etapaAtual != "#fim-calculadora") {
+      etapaAtual = '#etapa-rede';
+      $(".slide").hide();
+      $("#rede").show();
+      $(".etapa-calculadora").removeClass("active");
+      $("#etapa-rede").addClass("active");
+    }
   });
   $("#rede-monofasica, #rede-bifasica, #rede-trifasica, #etapa-face").click(function() {
-    etapaAtual = '#etapa-face';
-    $(".slide").hide();
-    $("#face-da-casa").show();
-    $(".etapa-calculadora").removeClass("active");
-    $("#etapa-face").addClass("active");
+    if (etapaAtual != "#etapa-resultado" && etapaAtual != "#fim-calculadora") {
+      etapaAtual = '#etapa-face';
+      $(".slide").hide();
+      $("#face-da-casa").show();
+      $(".etapa-calculadora").removeClass("active");
+      $("#etapa-face").addClass("active");
+    }
   });
   $(".face-casa, #etapa-telhado").click(function() {
-    etapaAtual = '#etapa-telhado';
-    $(".slide").hide();
-    $("#telhado").show();
-    $(".etapa-calculadora").removeClass("active");
-    $("#etapa-telhado").addClass("active");
+    if (etapaAtual != "#etapa-resultado" && etapaAtual != "#fim-calculadora") {
+      etapaAtual = '#etapa-telhado';
+      $(".slide").hide();
+      $("#telhado").show();
+      $(".etapa-calculadora").removeClass("active");
+      $("#etapa-telhado").addClass("active");
+    }
   });
   $("#telha-borracha, #telha-ceramica, #telha-fibrocimento, #telha-metalica, #telha-trapezoidal, #etapa-contato").click(function() {
-    etapaAtual = '#etapa-contato';
-    $(".slide").hide();
-    $("#contato").show();
-    $(".etapa-calculadora").removeClass("active");
-    $("#etapa-contato").addClass("active");
-    $("#seta-proxima").hide();
+    if (etapaAtual != "#etapa-resultado" && etapaAtual != "#fim-calculadora") {
+      etapaAtual = '#etapa-contato';
+      $(".slide").hide();
+      $("#contato").show();
+      $(".etapa-calculadora").removeClass("active");
+      $("#etapa-contato").addClass("active");
+      $("#seta-proxima").hide();
+    }
   });
   $("#confirma-contato").click(function() {
     etapaAtual = '#etapa-resultado';
@@ -162,12 +172,14 @@ $( document ).ready(function() {
     $("#fim-calculadora").show();
   });
   $("#etapa-localizacao").click(function() {
-    etapaAtual = '#etapa-localizacao';
-    $(".slide").hide();
-    $("#localizacao").show();
-    $(".etapa-calculadora").removeClass("active");
-    $("#etapa-localizacao").addClass("active");
-    $("#seta-anterior").hide();
+    if (etapaAtual !== "#etapa-resultado") {
+      etapaAtual = '#etapa-localizacao';
+      $(".slide").hide();
+      $("#localizacao").show();
+      $(".etapa-calculadora").removeClass("active");
+      $("#etapa-localizacao").addClass("active");
+      $("#seta-anterior").hide();
+    }
   });
 });
 
