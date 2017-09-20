@@ -1,7 +1,12 @@
 $( document ).ready(function() {
   // variável para controle de setas de ida e volta
   var etapaAtual = '#etapa-localizacao';
-
+  // variável para log de erros no processo
+  var impossibilidade = false;
+  // variável de face da casa
+  var faceCasa = '';
+  // variável de rede da casa
+  var redeCasa = '';
   // funcao dos botoes de ida e volta
   $('#seta-anterior').click(function() {
     switch(etapaAtual) {
@@ -132,6 +137,10 @@ $( document ).ready(function() {
   $("#rede-monofasica, #rede-bifasica, #rede-trifasica, #etapa-face").click(function() {
     if (etapaAtual != "#etapa-resultado" && etapaAtual != "#fim-calculadora") {
       etapaAtual = '#etapa-face';
+      redeCasa = $(this).attr("id");
+      if (redeCasa == "rede-monofasica") {
+        impossibilidade = true;
+      }
       $(".slide").hide();
       $("#face-da-casa").show();
       $(".etapa-calculadora").removeClass("active");
@@ -139,6 +148,10 @@ $( document ).ready(function() {
     }
   });
   $(".face-casa, #etapa-telhado").click(function() {
+    faceCasa = $(this).attr('id');
+    if (faceCasa != "face-norte" && faceCasa != "face-nordeste" && faceCasa != "face-noroeste") {
+      impossibilidade = true;
+    }
     if (etapaAtual != "#etapa-resultado" && etapaAtual != "#fim-calculadora") {
       etapaAtual = '#etapa-telhado';
       $(".slide").hide();
@@ -160,7 +173,23 @@ $( document ).ready(function() {
   $("#confirma-contato").click(function() {
     etapaAtual = '#etapa-resultado';
     $(".slide").hide();
-    $("#kit-energia-solar").show();
+    if (impossibilidade == true) {
+      if (redeCasa == "rede-monofasica") {
+        if (faceCasa == "face-norte" || faceCasa == "face-nordeste" || faceCasa == "face-noroeste") {
+          $("#erro-fase").show();
+        }
+        else {
+          $("#erro-fase-face").show();
+        }
+      }
+      else {
+        $("#erro-face").show();
+      }
+      $("#erro").show();
+    }
+    else {
+      $("#kit-energia-solar").show();
+    }
     $(".etapa-calculadora").removeClass("active");
     $("#etapa-resultado").addClass("active").removeClass("inactive");
     $("#setas").hide();

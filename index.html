@@ -145,10 +145,19 @@
             </div>
             <div id="rede" class="slide">
               <p>Qual é a <strong>rede</strong> instalada em sua casa?</p>
-              <div class="text-center">
-                <button type="button" class="btn btn-primary" id="rede-monofasica">Monofásica</button>
-                <button type="button" class="btn btn-primary" id="rede-bifasica">Bifásica</button>
-                <button type="button" class="btn btn-primary" id="rede-trifasica">Trifásica</button>
+              <div class="row text-center">
+                <div class="col-md-4">
+                  <img src="rede.jpg" alt="Rede monofásica">
+                  <button type="button" class="btn btn-primary" id="rede-monofasica">Monofásica</button>
+                </div>
+                <div class="col-md-4">
+                  <img src="rede.jpg" alt="Rede binofásica">
+                  <button type="button" class="btn btn-primary" id="rede-bifasica">Bifásica</button>
+                </div>
+                <div class="col-md-4">
+                  <img src="rede.jpg" alt="Rede trifásica">
+                  <button type="button" class="btn btn-primary" id="rede-trifasica">Trifásica</button>
+                </div>
               </div>
             </div>
             <div id="face-da-casa" class="slide">
@@ -165,13 +174,28 @@
               </div>
             </div>
             <div id="telhado" class="slide">
-              <p>Qual é o <strong>tipo de telhado</strong> da sua casa?</p>
-              <div class="text-center">
-                <button type="button" class="btn btn-primary" id="telha-borracha">Telha de borracha</button>
-                <button type="button" class="btn btn-primary" id="telha-ceramica">Telha cerâmica</button>
-                <button type="button" class="btn btn-primary" id="telha-fibrocimento">Telha fibrocimento</button>
-                <button type="button" class="btn btn-primary" id="telha-metalica">Telhado metálico</button>
-                <button type="button" class="btn btn-primary" id="telha-trapezoidal">Telhas metálicas trapezoidais</button>
+              <p>Qual é o <strong>tipo de telha</strong> da sua casa?</p>
+              <div class="row text-center">
+                <div class="col-md-6">
+                  <img src="telha.jpg" alt="Borracha">
+                  <button type="button" class="btn btn-primary" id="telha-borracha">Borracha</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="telha.jpg" alt="Cerâmica">
+                  <button type="button" class="btn btn-primary" id="telha-ceramica">Cerâmica</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="telha.jpg" alt="Fibrocimento">
+                  <button type="button" class="btn btn-primary" id="telha-fibrocimento">Fibrocimento</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="telha.jpg" alt="Metálico">
+                  <button type="button" class="btn btn-primary" id="telha-metalica">Metálico</button>
+                </div>
+                <div class="col-md-6">
+                  <img src="telha.jpg" alt="Metálicas trapezoidais">
+                  <button type="button" class="btn btn-primary" id="telha-trapezoidal">Metálicas <br>trapezoidais</button>
+                </div>
               </div>
             </div>
             <div id="contato" class="slide">
@@ -204,6 +228,12 @@
                 <button type="button" class="btn btn-success" id="confirma-logger">Sim</button>
                 <button type="button" class="btn btn-danger" id="rejeita-logger">Não</button>
               </div>
+            </div>
+            <div id="erro" class="slide">
+              <p id="erro-fase">A fase da sua casa é monofásica, o que impossibilita a execução do projeto. Adaptações serão necessárias, entraremos em contato por e-mail para mais detalhes.</p>
+              <p id="erro-face">A face da sua casa é menos eficiente para a produção de energia solar. Adaptações serão necessárias. Entraremos em contato por e-mail.</p>
+              <p id="erro-fase-face">A face da sua casa e sua rede são inadequadas para o sistema de energia solar, algumas adaptações serão necessárias. Entraremos em contato por e-mail para mais informações.</p>
+              <button type="button" class="btn btn-success btn-lg" id="fecha-calculadora" data-dismiss="modal">Ok, sair.</button>
             </div>
             <div id="fim-calculadora" class="slide">
               <p><strong>Confira sua caixa de e-mail</strong>, você terá mais informações sobre orçamento e outros detalhes para implantação de energia solar em sua residência.</p>

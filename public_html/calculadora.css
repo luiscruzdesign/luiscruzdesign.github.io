@@ -1,5 +1,5 @@
 /* Elementos ocultos por default */
-#seletor-cidade, #cidades, #confirma-cidade-seletor, #consumo-medio, #rede, #face-da-casa, #telhado, #contato, #kit-energia-solar, #fim-calculadora, #consumo-medio #media-mensal, #consumo-medio #media-12-meses {
+#seletor-cidade, #cidades, #confirma-cidade-seletor, #consumo-medio, #rede, #face-da-casa, #telhado, #contato, #kit-energia-solar, #fim-calculadora, #consumo-medio #media-mensal, #consumo-medio #media-12-meses, #erro, #erro-face, #erro-fase, #erro-fase-face {
   display: none;
 }
 /* Estilização de fontes em geral para open sans */
@@ -141,18 +141,22 @@
   bottom: -42px;
   right: 84px;
 }
-#telhado button {
+#telhado .row div {
+  width: 20%;
+  margin: 30px 0 10px;
+}
+#telhado img {
   width: 100%;
-  margin-bottom: 10px;
 }
-#telhado button:first-child {
-  margin-top: 10px;
-}
-#telhado button:last-child {
-  margin-bottom: 0;
+#telhado button {
+  margin-top: 15px;
+  font-size: 10px;
 }
 #kit-energia-solar button, #fim-calculadora button, #confirma-contato {
   margin-top: 15px;
+}
+#erro p {
+  margin: 10px 0 30px;
 }
 /* Footer */
 .modal-footer {
