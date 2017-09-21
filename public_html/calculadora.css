@@ -98,6 +98,10 @@
 #consumo-medio #seletor-consumo p:last-of-type {
   margin-left: 10px;
 }
+#rede div {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 #face-da-casa #ilustracao-faces {
   width: 70%;
   height: 266px;

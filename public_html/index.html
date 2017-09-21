@@ -20,14 +20,6 @@
             <h4 class="modal-title">Monte seu projeto de <strong>energia solar</strong>.</h4>
           </div>
           <div class="modal-body">
-            <!--
-            1 - Deve ser possível ao usuário voltar para a página anterior por setas (OK)
-            2 - Se o usuário indicar face sul , sudeste ou sudeste para o telhado o projeto é inviável poi sé necessária uma adequação de telhado , mas emita uma mensagem dizendo que entraremos em contato .
-            3- As faces possíveis são Norte , Noroeste e Nordeste
-            4- Incluir o número de celular também além do e-mail (OK)
-            5 - Falta incluir na calculadora o tipo de telhado (OK)
-            6 - incluir o tipo de entrada , nonofásica , bifásica ou trifásica (OK)
-            -->
             <div id="localizacao" class="slide">
               <div id="geolocalizacao-cidade">
                 <p>A calculadora de projeto de energia solar coletará informações sobre a localização e consumo da sua residência para que você possa acabar com sua conta de luz.</p>
@@ -145,23 +137,14 @@
             </div>
             <div id="rede" class="slide">
               <p>Qual é a <strong>rede</strong> instalada em sua casa?</p>
-              <div class="row text-center">
-                <div class="col-md-4">
-                  <img src="rede.jpg" alt="Rede monofásica">
-                  <button type="button" class="btn btn-primary" id="rede-monofasica">Monofásica</button>
-                </div>
-                <div class="col-md-4">
-                  <img src="rede.jpg" alt="Rede binofásica">
-                  <button type="button" class="btn btn-primary" id="rede-bifasica">Bifásica</button>
-                </div>
-                <div class="col-md-4">
-                  <img src="rede.jpg" alt="Rede trifásica">
-                  <button type="button" class="btn btn-primary" id="rede-trifasica">Trifásica</button>
-                </div>
+              <div class="text-center">
+                <button type="button" class="btn btn-primary" id="rede-monofasica">Monofásica</button>
+                <button type="button" class="btn btn-primary" id="rede-bifasica">Bifásica</button>
+                <button type="button" class="btn btn-primary" id="rede-trifasica">Trifásica</button>
               </div>
             </div>
             <div id="face-da-casa" class="slide">
-              <p>Qual é a <strong>face da sua casa?</strong> Isso influência a incidência de luz sobre a casa.</p>
+              <p>Qual é a <strong>face do seu telhado?</strong> Isso influência a incidência de luz sobre a casa.</p>
               <div id="ilustracao-faces">
                 <button type="button" class="btn btn-primary face-casa" id="face-norte">Norte</button>
                 <button type="button" class="btn btn-primary face-casa" id="face-nordeste">Nordeste</button>
@@ -230,15 +213,17 @@
               </div>
             </div>
             <div id="erro" class="slide">
-              <p id="erro-fase">A fase da sua casa é monofásica, o que impossibilita a execução do projeto. Adaptações serão necessárias, entraremos em contato por e-mail para mais detalhes.</p>
-              <p id="erro-face">A face da sua casa é menos eficiente para a produção de energia solar. Adaptações serão necessárias. Entraremos em contato por e-mail.</p>
-              <p id="erro-fase-face">A face da sua casa e sua rede são inadequadas para o sistema de energia solar, algumas adaptações serão necessárias. Entraremos em contato por e-mail para mais informações.</p>
-              <button type="button" class="btn btn-success btn-lg" id="fecha-calculadora" data-dismiss="modal">Ok, sair.</button>
+              <p id="erro-fase" class="erro">A fase da sua casa é monofásica, o que impossibilita a execução do projeto. Adaptações serão necessárias, entraremos em contato por e-mail para mais detalhes.</p>
+              <p id="erro-face" class="erro">A face da sua casa é menos eficiente para a produção de energia solar. Adaptações serão necessárias. Entraremos em contato por e-mail.</p>
+              <p id="erro-fase-face" class="erro">A face da sua casa e sua rede são inadequadas para o sistema de energia solar, algumas adaptações serão necessárias. Entraremos em contato por e-mail para mais informações.</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-success btn-lg fecha-calculadora" data-dismiss="modal">Ok, sair.</button>
+              </div>
             </div>
             <div id="fim-calculadora" class="slide">
               <p><strong>Confira sua caixa de e-mail</strong>, você terá mais informações sobre orçamento e outros detalhes para implantação de energia solar em sua residência.</p>
               <div class="text-center">
-                <button type="button" class="btn btn-success btn-lg" id="fecha-calculadora" data-dismiss="modal">Ok, sair.</button>
+                <button type="button" class="btn btn-success btn-lg fecha-calculadora" data-dismiss="modal">Ok, sair.</button>
               </div>
             </div>
           </div>
