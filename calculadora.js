@@ -102,8 +102,9 @@ $( document ).ready(function() {
   });
   // sequencia de etapas pelos botões no conteúdo
   $("#abre-seletor-cidade").click(function() {
-    $(".slide").hide();
-    $("#seletor-cidade").show();
+    $(".slide, #geolocalizacao-cidade").hide();
+    $("#localizacao, #seletor-cidade").show();
+    console.log("olá");
   });
   $("#estados").change(function() {
     $("#cidades").show();
@@ -209,6 +210,18 @@ $( document ).ready(function() {
       $("#etapa-localizacao").addClass("active");
       $("#seta-anterior").hide();
     }
+  });
+  $(".fecha-calculadora").click(function() {
+    etapaAtual = '#etapa-localizacao';
+    impossibilidade = false;
+    faceCasa = '';
+    redeCasa = '';
+    $(".slide, .erro").hide();
+    $("#localizacao").show();
+    $(".etapa-calculadora").removeClass("inactive");
+    $("#etapa-resultado").addClass("inactive");
+    $("#etapa-localizacao").addClass("active");
+    $("#seta-anterior").hide();
   });
 });
 
