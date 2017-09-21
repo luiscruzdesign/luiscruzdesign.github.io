@@ -216,8 +216,8 @@ $( document ).ready(function() {
     impossibilidade = false;
     faceCasa = '';
     redeCasa = '';
-    $(".slide, .erro").hide();
-    $("#localizacao").show();
+    $(".slide, .erro, #seletor-cidade").hide();
+    $("#localizacao, #geolocalizacao-cidade").show();
     $(".etapa-calculadora").removeClass("inactive");
     $("#etapa-resultado").addClass("inactive");
     $("#etapa-localizacao").addClass("active");
